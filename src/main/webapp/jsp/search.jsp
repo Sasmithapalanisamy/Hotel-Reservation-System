@@ -11,8 +11,8 @@
 %>
 <html><body>
 <h2>Available Rooms</h2>
-<a href="../jsp/logout.jsp">Logout</a> | <a href="../jsp/bookings.jsp">My Bookings</a>
-<table border="1">
+<a href="/Hotel-Reservation-System/jsp/logout.jsp">Logout</a> |
+<a href="/Hotel-Reservation-System/jsp/bookings.jsp">My Bookings</a><table border="1">
 <tr><th>Room #</th><th>Type</th><th>Price</th><th>Capacity</th><th>Status</th><th>Action</th></tr>
 <% for(Room r: rooms) { %>
 <tr>
@@ -23,7 +23,7 @@
   <td><%=r.getStatus()%></td>
   <td>
   
-<form action="../Hotel-Reservation-System/BookRoomServlet" method="post">
+<form action="/Hotel-Reservation-System/BookRoomServlet" method="post">
       <input type="hidden" name=room_id" value="<%=r.getRoomId()%>" />
       Check-in: <input type="date" name="checkin" required />
       Check-out: <input type="date" name="checkout" required />

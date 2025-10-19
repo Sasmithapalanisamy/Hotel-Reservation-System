@@ -1,6 +1,6 @@
 <%@ page import="java.util.List,com.hotel.model.Booking,com.hotel.dao.BookingDAO" %>
 <%
-    HttpSession session = request.getSession(false);
+   session = request.getSession(false);
     if(session==null || session.getAttribute("user")==null) {
         response.sendRedirect("login.jsp");
         return;
