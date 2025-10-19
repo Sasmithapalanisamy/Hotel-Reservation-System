@@ -1,8 +1,11 @@
 package com.hotel.servlet;
 import com.hotel.dao.UserDAO;
 import com.hotel.model.User;
-import javax.servlet.*;
-import javax.servlet.http.*;
+
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletException;
 import java.io.IOException;
 
 public class RegisterServlet extends HttpServlet {
@@ -16,6 +19,8 @@ public class RegisterServlet extends HttpServlet {
             res.sendRedirect("jsp/register.jsp?error=invalidemail");
             return;
         }
+        
+        res.getWriter().print("In registerServlet");
 
         User u = new User();
         u.setName(name); u.setEmail(email); u.setPassword(password); u.setRole("guest");

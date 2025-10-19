@@ -1,6 +1,8 @@
 package com.hotel.servlet;
-import javax.servlet.*;
-import javax.servlet.http.*;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.*;
+import jakarta.servlet.ServletException;
 import java.io.IOException;
 
 public class LogoutServlet extends HttpServlet {
@@ -10,4 +12,3 @@ public class LogoutServlet extends HttpServlet {
         res.sendRedirect("jsp/index.jsp");
     }
 }
-s

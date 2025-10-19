@@ -1,1 +1,10 @@
 /build/
+.DS_Store
+*.class
+*.log
+bin/
+target/
+.settings/
+.idea/
+.vscode/
+*.jar

@@ -4,13 +4,15 @@ import com.hotel.dao.RoomDAO;
 import com.hotel.model.Booking;
 import com.hotel.model.Room;
 import com.hotel.model.User;
-import javax.servlet.*;
-import javax.servlet.http.*;
+import jakarta.servlet.*;
+import jakarta.servlet.http.*;
 import java.io.IOException;
 import java.time.LocalDate;
 
 public class BookRoomServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+    	res.getWriter().println("In Book Room Servlet");
+    	System.out.println("!!!!!!!!IN BOOK ROOM SERVLETTTTTTT!!!!!!!!!!!!");
         HttpSession session=req.getSession(false);
         if(session==null || session.getAttribute("user")==null){
             res.sendRedirect("jsp/login.jsp?error=loginrequired");

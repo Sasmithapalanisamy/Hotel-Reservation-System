@@ -1,8 +1,8 @@
 package com.hotel.servlet;
 import com.hotel.dao.BookingDAO;
 import com.hotel.model.Booking;
-import javax.servlet.*;
-import javax.servlet.http.*;
+import jakarta.servlet.*;
+import jakarta.servlet.http.*;
 import java.io.IOException;
 import java.util.List;
 

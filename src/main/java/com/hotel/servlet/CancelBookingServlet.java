@@ -1,11 +1,14 @@
 package com.hotel.servlet;
 import com.hotel.dao.BookingDAO;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servet.http.*;
+import jakarta.servlet.ServletException;
 import com.hotel.dao.RoomDAO;
 import com.hotel.model.Booking;
 import com.hotel.model.Room;
 import com.hotel.model.User;
-import javax.servlet.*;
-import javax.servlet.http.*;
+
 import java.io.IOException;
 import java.time.LocalDate;
 

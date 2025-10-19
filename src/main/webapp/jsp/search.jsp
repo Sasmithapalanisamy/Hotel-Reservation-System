@@ -1,4 +1,6 @@
 <%@ page import="java.util.List,com.hotel.model.Room" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <%
     List<Room> rooms = (List<Room>) request.getAttribute("rooms");
     if(rooms==null) {
@@ -20,8 +22,9 @@
   <td><%=r.getCapacity()%></td>
   <td><%=r.getStatus()%></td>
   <td>
-    <form action="../BookRoomServlet" method="post">
-      <input type="hidden" name="room_id" value="<%=r.getRoomId()%>" />
+  
+<form action="../Hotel-Reservation-System/BookRoomServlet" method="post">
+      <input type="hidden" name=room_id" value="<%=r.getRoomId()%>" />
       Check-in: <input type="date" name="checkin" required />
       Check-out: <input type="date" name="checkout" required />
       <button type="submit">Book</button>

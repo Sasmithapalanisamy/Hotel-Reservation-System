@@ -1,7 +1,8 @@
 package com.hotel.servlet;
 import com.hotel.dao.RoomDAO;
-import javax.servlet.*;
-import javax.servlet.http.*;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletException;
 import java.io.IOException;
 
 public class UpdateRoomStatusServlet extends HttpServlet {
